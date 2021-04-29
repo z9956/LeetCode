@@ -3,16 +3,12 @@
  * @return {void} Do not return anything, modify nums in-place instead.
  */
 var moveZeroes = function(nums) {
-  let left = 0;
-  let right = 0;
+  let j = 0;
 
-  while (left < nums.length) {
-    if (nums[left] !== 0) {
-      [nums[left], nums[right] ] = [nums[right], nums[left]];
-      left++;
-      right++;
-    } else {
-      left++;
+  for(let i = 0; i < nums.length; i++) {
+    if (nums[i] !== 0) {
+      [nums[j], nums[i]] = [nums[i], nums[j]];
+      j++;
     }
   }
 };
@@ -21,4 +17,4 @@ var moveZeroes = function(nums) {
  * 输入: [0,1,0,3,12]
  * 输出: [1,3,12,0,0]
  * */
-
+let a = [0,1,0,3,12]
