@@ -23,6 +23,7 @@ var strStr = function (haystack, needle) {
         i = index;
         index = -1;
         j = 0;
+        console.log(i, index);
       }
     }
 
@@ -43,6 +44,8 @@ var strStr = function (haystack, needle) {
  * 输出：0
  *
  * 输入：haystack = "mississippi", needle = "issi"
- * 输出： 1
+ * 输出：1
+ *
+ * 输入：haystack = "mississippi", needle = "issip"
+ * 输出：4
  * */
-
