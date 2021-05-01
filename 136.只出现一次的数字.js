@@ -2,14 +2,13 @@
  * @param {number[]} nums
  * @return {number}
  */
-var singleNumber = function(nums) {
+var singleNumber = function (nums) {
   let ans = 0;
-  for(let i = 0; i < nums.length; i++){
+  for (let i = 0; i < nums.length; i++) {
     ans ^= nums[i];
   }
   return ans;
 };
-
 
 /**
  * 任何数和 0 做异或运算，结果仍然是原来的数，即 a⊕0 = a
