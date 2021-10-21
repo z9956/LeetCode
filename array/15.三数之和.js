@@ -22,8 +22,8 @@ var threeSum = function (nums) {
 			if (sum === 0) {
 				results.push([nums[i], nums[first], nums[last]]);
 
-				while (first < last && nums[first] === nums[first + 1]) first++;
-				while (last < last && nums[last] === nums[last - 1]) last--;
+				while (nums[first] === nums[first + 1]) first++;
+				// while (first < last && nums[first] === nums[first + 1]) first++;
 				first++;
 				last--;
 			} else if (sum < 0) {
