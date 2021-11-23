@@ -12,24 +12,24 @@
  * @return {ListNode}
  */
 var reverseBetween = function (head, left, right) {
-  const dummy = new ListNode(0);
-  dummy.next = head;
+	const dummy = new ListNode(0);
+	dummy.next = head;
 
-  let pre = dummy;
+	let pre = dummy;
 
-  for (let i = 0; i < left - 1; i++) {
-    pre = pre.next;
-  }
+	for (let i = 0; i < left - 1; i++) {
+		pre = pre.next;
+	}
 
-  let cur = pre.next;
-  for (let i = 0; i < right - left; i++) {
-    const next = cur.next;
-    cur.next = next.next;
-    next.next = pre.next;
-    pre.next = next;
-  }
+	let cur = pre.next;
+	for (let i = 0; i < right - left; i++) {
+		const next = cur.next;
+		cur.next = next.next;
+		next.next = pre.next;
+		pre.next = next;
+	}
 
-  return dummy.next;
+	return dummy.next;
 };
 
 /*

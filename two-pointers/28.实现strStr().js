@@ -4,32 +4,32 @@
  * @return {number}
  */
 var strStr = function (haystack, needle) {
-  if (!needle || haystack === needle) return 0;
-  if (haystack.length < needle.length) return -1;
+	if (!needle || haystack === needle) return 0;
+	if (haystack.length < needle.length) return -1;
 
-  let i = 0;
-  let j = 0;
-  let index = -1;
+	let i = 0;
+	let j = 0;
+	let index = -1;
 
-  while (i < haystack.length && j < needle.length) {
-    if (haystack[i] === needle[j]) {
-      if (index === -1) index = i;
+	while (i < haystack.length && j < needle.length) {
+		if (haystack[i] === needle[j]) {
+			if (index === -1) index = i;
 
-      if (j === needle.length - 1) return index;
+			if (j === needle.length - 1) return index;
 
-      j++;
-    } else {
-      if (index !== -1) {
-        i = index;
-        index = -1;
-        j = 0;
-      }
-    }
+			j++;
+		} else {
+			if (index !== -1) {
+				i = index;
+				index = -1;
+				j = 0;
+			}
+		}
 
-    i++;
-  }
+		i++;
+	}
 
-  return -1;
+	return -1;
 };
 
 /**

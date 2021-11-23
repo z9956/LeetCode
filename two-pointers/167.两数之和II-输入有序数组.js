@@ -5,31 +5,31 @@
  */
 //有序数组,首尾双时针查找 O(N)
 var twoSum = function (numbers, target) {
-  let i = 0;
-  let j = numbers.length - 1;
+	let i = 0;
+	let j = numbers.length - 1;
 
-  while (i < j) {
-    const sum = numbers[i] + numbers[j];
-    if (sum === target) return [i + 1, j + 1];
+	while (i < j) {
+		const sum = numbers[i] + numbers[j];
+		if (sum === target) return [i + 1, j + 1];
 
-    sum > target ? j-- : i++;
-  }
+		sum > target ? j-- : i++;
+	}
 };
 
 var twoSum2 = function (numbers, target) {
-  let i = 0;
-  let j = 1;
+	let i = 0;
+	let j = 1;
 
-  while (i < numbers.length) {
-    if (numbers[i] + numbers[j] === target) return [i + 1, j + 1];
+	while (i < numbers.length) {
+		if (numbers[i] + numbers[j] === target) return [i + 1, j + 1];
 
-    if (j === numbers.length - 1) {
-      i++;
-      j = i + 1;
-    } else {
-      j++;
-    }
-  }
+		if (j === numbers.length - 1) {
+			i++;
+			j = i + 1;
+		} else {
+			j++;
+		}
+	}
 };
 
 /*

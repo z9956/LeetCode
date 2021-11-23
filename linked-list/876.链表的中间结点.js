@@ -10,26 +10,26 @@
  * @return {ListNode}
  */
 var middleNode = function (head) {
-  let results = [];
+	let results = [];
 
-  let current = head;
+	let current = head;
 
-  while (current) {
-    results.push(current);
+	while (current) {
+		results.push(current);
 
-    current = current.next;
-  }
+		current = current.next;
+	}
 
-  return results[results.length >> 1];
+	return results[results.length >> 1];
 };
 
 var middleNodeTwo = function (head) {
-  let slow = head;
-  let fast = head;
+	let slow = head;
+	let fast = head;
 
-  while (fast && fast.next) {
-    slow = slow.next;
-    fast = fast.next.next;
-  }
-  return slow;
+	while (fast && fast.next) {
+		slow = slow.next;
+		fast = fast.next.next;
+	}
+	return slow;
 };

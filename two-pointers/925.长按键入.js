@@ -4,20 +4,20 @@
  * @return {boolean}
  */
 var isLongPressedName = function (name, typed) {
-  let i = 0;
-  let j = 0;
+	let i = 0;
+	let j = 0;
 
-  while (j < typed.length) {
-    if (name[i] === typed[j]) {
-      i++;
-      j++;
-    } else if (j && typed[j] === name[i - 1]) {
-      j++;
-    } else {
-      return false;
-    }
-  }
-  return i === name.length;
+	while (j < typed.length) {
+		if (name[i] === typed[j]) {
+			i++;
+			j++;
+		} else if (j && typed[j] === name[i - 1]) {
+			j++;
+		} else {
+			return false;
+		}
+	}
+	return i === name.length;
 };
 
 /*

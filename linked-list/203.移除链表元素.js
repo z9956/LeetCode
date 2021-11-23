@@ -11,19 +11,19 @@
  * @return {ListNode}
  */
 var removeElements = function (head, val) {
-  if (!head) return head;
+	if (!head) return head;
 
-  let currentNode = head;
+	let currentNode = head;
 
-  while (currentNode.next) {
-    if (currentNode.next.val === val) {
-      currentNode.next = currentNode.next.next;
-    } else {
-      currentNode = currentNode.next;
-    }
-  }
+	while (currentNode.next) {
+		if (currentNode.next.val === val) {
+			currentNode.next = currentNode.next.next;
+		} else {
+			currentNode = currentNode.next;
+		}
+	}
 
-  return head.val === val ? head.next : head;
+	return head.val === val ? head.next : head;
 };
 
 /*

@@ -11,22 +11,22 @@
  * @return {void} Do not return anything, modify root in-place instead.
  */
 var flatten = function (root) {
-  const list = [];
-  preorderTraversal(root, list);
+	const list = [];
+	preorderTraversal(root, list);
 
-  for (let i = 1; i < list.length; i++) {
-    const prev = list[i - 1];
-    const curr = list[i];
+	for (let i = 1; i < list.length; i++) {
+		const prev = list[i - 1];
+		const curr = list[i];
 
-    prev.left = null;
-    prev.right = curr;
-  }
+		prev.left = null;
+		prev.right = curr;
+	}
 };
 
 var preorderTraversal = (root, list) => {
-  if (root != null) {
-    list.push(root.val);
-    preorderTraversal(root.left, list);
-    preorderTraversal(root.right, list);
-  }
+	if (root != null) {
+		list.push(root.val);
+		preorderTraversal(root.left, list);
+		preorderTraversal(root.right, list);
+	}
 };

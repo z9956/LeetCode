@@ -10,32 +10,32 @@
  * @return {ListNode}
  */
 var reverseList = function (head) {
-  let currentNode = head;
-  let prevNode = null;
-  let nextNode = null;
+	let currentNode = head;
+	let prevNode = null;
+	let nextNode = null;
 
-  while (currentNode) {
-    nextNode = currentNode.next;
-    currentNode.next = prevNode;
-    prevNode = currentNode;
-    currentNode = nextNode;
-  }
-  return prevNode;
+	while (currentNode) {
+		nextNode = currentNode.next;
+		currentNode.next = prevNode;
+		prevNode = currentNode;
+		currentNode = nextNode;
+	}
+	return prevNode;
 };
 
 var reverseListTwo = (head) => {
-  let prev = null;
-  let cur = head;
+	let prev = null;
+	let cur = head;
 
-  while (cur) {
-    let next = cur.next;
-    cur.next = prev;
+	while (cur) {
+		let next = cur.next;
+		cur.next = prev;
 
-    prev = cur;
-    cur = next;
-  }
+		prev = cur;
+		cur = next;
+	}
 
-  return prev;
+	return prev;
 };
 
 /*

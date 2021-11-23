@@ -11,21 +11,21 @@
  * @return {boolean}
  */
 var hasCycle = function (head) {
-  let fast = head;
-  let slow = head;
+	let fast = head;
+	let slow = head;
 
-  while (fast) {
-    if (fast.next === null) return false;
+	while (fast) {
+		if (fast.next === null) return false;
 
-    slow = slow.next;
-    fast = fast.next.next;
-    if (slow === fast) return true;
-  }
-  return false;
+		slow = slow.next;
+		fast = fast.next.next;
+		if (slow === fast) return true;
+	}
+	return false;
 };
 
 /*
-* 输入：head = [3,2,0,-4], pos = 1
-* 输出：true
-* 解释：链表中有一个环，其尾部连接到第二个节点。
-* */
+ * 输入：head = [3,2,0,-4], pos = 1
+ * 输出：true
+ * 解释：链表中有一个环，其尾部连接到第二个节点。
+ * */

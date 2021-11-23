@@ -7,16 +7,16 @@
  */
 
 class MyHashSet {
-  constructor() {
-    this.data = {};
-  }
-  add(value) {
-    if (!this.data[value]) this.data[value] = true;
-  }
-  contains(value) {
-    return !!this.data[value];
-  }
-  remove(value) {
-    if (this.data[value]) delete this.data[value];
-  }
+	constructor() {
+		this.data = {};
+	}
+	add(value) {
+		if (!this.data[value]) this.data[value] = true;
+	}
+	contains(value) {
+		return !!this.data[value];
+	}
+	remove(value) {
+		if (this.data[value]) delete this.data[value];
+	}
 }
