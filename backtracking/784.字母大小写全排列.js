@@ -52,7 +52,7 @@ var letterCasePermutation = function (s) {
  * */
 
 // console.log(letterCasePermutation('a1b2'));
-console.log(letterCasePermutation2('a1b2'));
+console.log(letterCasePermutation('a1b2'));
 // console.log(letterCasePermutation('3z4'));
 // console.log(letterCasePermutation('C'));
 // console.log(letterCasePermutation('qwerasdfzxcv'));
