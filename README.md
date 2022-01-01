@@ -1,4 +1,4 @@
-# leetcode
+# LeetCode
 
 [z9956/algorithms](https://github.com/z9956/algorithms)
 
